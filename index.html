@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projeto Final</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/index.js" defer></script>
     <script src="./js/database.js" defer></script>
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
     <header class="cabecalho">
@@ -22,16 +22,16 @@
     
                 <ul>
                     <li>
-                        <a href="">Todos</a>
+                        <a onclick="preencherItens()" target="_blank">Todos</a>
                     </li>
                     <li>
-                        <a href="">Acessórios</a>
+                        <a onclick="preencherItens('Acessórios')" target="_blank">Acessórios</a>
                     </li>
                     <li>
-                        <a href="">calçados</a>
+                        <a onclick="preencherItens()" target="_blank">Calçados</a>
                     </li>
                     <li>
-                        <a href="">Camisetas</a>
+                        <a onclick="preencherItens('Camisetas')" target="_blank">Camisetas</a>
                     </li>
                 </ul>
     
@@ -54,26 +54,26 @@
     
     
                 </ul>
-                <div class="column">
+                <div id="posicaocarrinho" class="column">
                     <div class="row">
-                        <input type="text">
-                        <button>pes</button>
+                        <input type="text" id="myInput" onkeyup="pesquisar()" placeholder="Pesquisar" title="Barra de pesquisa">
+                        <button class="botaoPesquisar">Pesquisar</button>
                     </div>
                     <div class="carrinho">
                         <p class="titulo">Carrinho de compras</p>
-                        <h2 class="carrinho_vazio">Carrinho vazio</h2>
+                        <p class="carrinho_vazio">Carrinho vazio</p>
                         <ul id="addCarrinho" class="scroll">
                     
                         </ul>
                     </div>
-                    <div>
+                    <div class="botaoCarrinho">
                         <div class="row">
-                            <p>Quantidade</p>
+                            <p class="quantidadeItens">Quantidade de itens:</p>
                             <p id="quantidade">0</p>
                         </div>
                         <div class="row">
-                            <p>Total</p>
-                            <span id="preco">R$</span>
+                            <p class="quantidadeItens">Total:</p>
+                            <span id="preco">R$0</span>
                         </div>
                     </div>
                 </div>
@@ -82,18 +82,6 @@
 
         </section>
     </main>
-    <!----
-    <aside>
-        <div class="carrinho">
-            <p class="titulo">Carrinho de compras</p>
-            <h2 class="carrinho_vazio">Carrinho vazio</h2>
-            <ul id="addCarrinho">
-
-            </ul>
-        </div>
-    -->
-        <!--<button type="submit" class="botaoFinalizar">Finalizar compra</button>-->
-    </aside>
-
+   
 </body>
 </html>
