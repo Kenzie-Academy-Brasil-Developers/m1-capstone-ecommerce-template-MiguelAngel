@@ -66,7 +66,7 @@ function procuraProduto(id, lista){
   return "Produto não encontrado!"
 }
 
-//criando card carrinho
+
 function criarCardFavorito(produto){
 
   let divCarrinho = document.createElement('div')
@@ -77,7 +77,7 @@ function criarCardFavorito(produto){
   let h2C = document.createElement('h2')
   let precoC = document.createElement('span')
   let buttonC = document.createElement('button')
-  let divBotao = document.createElement('div')
+  
 
   carrinho.push(produto)
   let p = document.querySelector('.carrinho_vazio')
