@@ -104,7 +104,6 @@ function criarCardFavorito(produto){
         spanPreco.innerText = carrinho.map(el => el.value).reduce((a,b) => a+b)
       }
       if(carrinho.length == 0){
-        console.log('ENTROU')
         p.style.display = 'flex'
       }
   })
